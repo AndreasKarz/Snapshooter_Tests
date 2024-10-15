@@ -1,4 +1,5 @@
 ﻿{
   "StudentId": 1,
-  "StudentName": "abc"
+  "StudentName": "abc",
+  "HomeAddress": null
 }

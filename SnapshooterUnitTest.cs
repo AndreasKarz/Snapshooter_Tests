@@ -40,7 +40,7 @@ namespace Snapshooter_Tests
         }
     }
 
-    internal record Student(int StudentId, string StudentName/*, Address HomeAddress*/);
+    internal record Student(int StudentId, string StudentName, Address? HomeAddress = null);
 
     internal record Address(string Street, string City, string ZipCode, string Country);
 }
