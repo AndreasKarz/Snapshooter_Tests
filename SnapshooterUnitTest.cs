@@ -8,14 +8,14 @@ namespace Snapshooter_Tests
     {
 
         [Fact]
-        public void Assert_AssertEqualObj_AssertSuccessful()
+        public void Assert_AssertEqualStudentObj_AssertSuccessful()
         {
-            var MyStudent = new Student(1, "abc"); 
+            Student MyStudent = new(1, "abc"/*, new("Spinnereiplatz 3", "Zürich", "8041", "Switzerland")*/); 
             Snapshot.Match(MyStudent);
         }
 
         [Fact] 
-        public void Assert_AssertEqualJson_AssertSuccessfulInTime()
+        public void Assert_AssertEqualStudentJson_AssertSuccessfulInTime()
         {
             var (userJsonString, timeTaken) = GetUserWithTiming();
             Snapshot.Match(userJsonString);
@@ -40,5 +40,7 @@ namespace Snapshooter_Tests
         }
     }
 
-    internal record Student(int StudentId, string StudentName);
+    internal record Student(int StudentId, string StudentName/*, Address HomeAddress*/);
+
+    internal record Address(string Street, string City, string ZipCode, string Country);
 }
