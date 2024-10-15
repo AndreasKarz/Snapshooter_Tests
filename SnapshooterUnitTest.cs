@@ -15,7 +15,7 @@ namespace Snapshooter_Tests
         }
 
         [Fact] 
-        public void Assert_AssertEqualStudentJson_AssertSuccessfulInTime()
+        public void Assert_AssertEqualUserJson_AssertSuccessfulInTime()
         {
             var (userJsonString, timeTaken) = GetUserWithTiming();
             Snapshot.Match(userJsonString);
